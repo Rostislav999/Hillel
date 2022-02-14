@@ -74,7 +74,7 @@ for i in range(0, lenstr, 2):
         result_list.append(s[i] + s[i + 1])
     else:
         result_list.append(s[i] + '_')
-
+print(result_list)
 
 #################################################
 
