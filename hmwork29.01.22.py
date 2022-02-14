@@ -1,24 +1,21 @@
-n = 32454500
-new_n = str(n)
+a = str(input())
 k = 0
-for i in new_n:
-    if i > "0":
-        None
-    else:
-        k += 1
+for i in a:
+  if i == "0":
+      k += 1
 print(k)
+
 
 
 #####################################
-n = 1002000
-new_n = str(n)
-k = 0
-for i in new_n:
-    if i > "0":
-        k = 0
-    else:
-        k += 1
-print(k)
+num = 1002000
+count = 0
+for i in str(num)[::-1]:
+     if i =='0':
+         count += 1
+     else:
+         break
+print(count)
 
 ######################################
 
@@ -43,8 +40,8 @@ print(new_list)
 ###############################################
 
 my_list = [1, 2, 3, 4]
-my_list.pop(0)
-my_list.append(1)
+list_value = my_list.pop(0)
+my_list.append(list_value)
 print(my_list)
 
 ##############################################
@@ -61,17 +58,12 @@ print(sum(int1))
 ###############################################
 
 my_str = "My long string"
-l_limit = "o"
-r_limit = "g"
-sub_str = []
-for i in my_str:
-    if i != l_limit:
-        sub_str.append(i)
-    elif i == l_limit:
-        sub_str.clear()
-        continue
-sub_str.pop()
-print(''.join(sub_str))
+l_limit, r_limit = "o", "g"
+l_index = my_str.find(l_limit) + 1  # нам не нужен символ 'o'
+r_index = my_str.rfind(r_limit)
+sub_str = my_str[my_str.find(l_limit) + 1: my_str.rfind(r_limit)]
+
+print(sub_str)
 ################################################
 
 s = 'qwert'
@@ -86,10 +78,10 @@ for i in range(0, lenstr, 2):
 
 #################################################
 
-list = [int(i) for i in input().split()]
+list = [1, 9, 1, 3, 4, 1, 9, 1]
 k = 0
-for i in range(1, len(list) - 1):
-    if list[i-1] <list[i] > list[i+1]:
+for i in range(0, len(list) - 1):
+    if sum([i-1] + [i+1]) < list[i]:
         k += 1
     else:
         None
