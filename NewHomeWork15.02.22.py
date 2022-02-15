@@ -70,7 +70,7 @@ def create_mail(names, dom):
     dom = list(dom)
     random_names = random.choice(names)
     random_dom = random.choice(dom)
-    print(str(random_names) + '.' + str(random.randint(0, 100)) + '@' + str(random_str(random.randint(1, 10))) + '.' + str(random_dom))
+    print(str(random_names) + '.' + str(random.randint(100, 999)) + '@' + str(random_str(random.randint(5, 7))) + '.' + str(random_dom))
 
 e_mail = create_mail(senames, domains)
 print(e_mail)
